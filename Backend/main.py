@@ -39,8 +39,6 @@ def add_Prediction(file: UploadFile = File(...)):
         "image_path": 'default'
     }
 
-
-
     db_prediction = Predictions(**new_prediction)
     db.add(db_prediction)
     db.commit()
@@ -63,4 +61,3 @@ def add_Prediction(file: UploadFile = File(...)):
 def get_Prediction():
     Predictions_db = db.query(Predictions).all()
     return Predictions_db
-

@@ -1,0 +1,11 @@
+joblib
+tensorflow
+collections
+numpy
+matplotlib
+opencv-python
+os
+sys
+dotenv
+sqlalchemy
+pydantic
