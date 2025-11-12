@@ -1,0 +1,9 @@
+BRF5
+.env
+Backend/__pycache__
+ML/Prediction/__pycache__
+Backend/__pycache__
+Backend/DB/__pycache__
+Backend/models/__pycache__
+Backend/schemas/__pycache__
+Data
