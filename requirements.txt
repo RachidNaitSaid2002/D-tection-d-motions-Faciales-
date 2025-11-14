@@ -9,3 +9,4 @@ pydantic
 mtcnn
 pytest
 httpx
+dotenv
