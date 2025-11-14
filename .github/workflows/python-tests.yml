@@ -38,5 +38,9 @@ jobs:
 
       - name: Run Tests
         env:
-          DataBase_URL: postgresql+psycopg2://test_user:test_password@localhost:5432/test_db
+          user: test_user
+          password: test_password
+          host: localhost
+          port: 5432
+          database: test_db
         run: pytest -v
