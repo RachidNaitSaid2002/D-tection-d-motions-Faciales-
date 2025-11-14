@@ -1,6 +1,6 @@
 # Détection d’Émotions Faciales
 
-Ce projet est un système de **détection d'émotions faciales** (intitulé "D-tection-d-motions-Faciales-" dans le README, probablement "Détection d’Émotions Faciales" en français, signifiant "Facial Emotion Detection"). Il intègre l'apprentissage automatique pour la reconnaissance des émotions avec un backend API web pour des prédictions en temps réel, le stockage en base de données et les tests automatisés.
+Ce projet est un système de **détection d'émotions faciales** . Il intègre l'apprentissage automatique pour la reconnaissance des émotions avec un backend API web pour des prédictions en temps réel, le stockage en base de données et les tests automatisés.
 
 ### Structure du Projet
 
