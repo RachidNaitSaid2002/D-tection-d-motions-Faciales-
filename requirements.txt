@@ -1,4 +1,5 @@
 joblib
+fastapi
 tensorflow
 numpy
 matplotlib
@@ -8,4 +9,3 @@ pydantic
 mtcnn
 pytest
 httpx
-fastapi
