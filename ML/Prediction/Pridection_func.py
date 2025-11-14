@@ -6,9 +6,8 @@ import numpy as np
 
 def Emotions_Predict(Myimage):
 
-    
     Class_Name = ['angry', 'disgusted', 'fearful', 'happy', 'neutral', 'sad', 'surprised']
-    Face_Cascade = cv2.CascadeClassifier('../ML/Haarcascade/haarcascade_frontalface_default.xml')
+    Face_Cascade = cv2.CascadeClassifier('ML/Haarcascade/haarcascade_frontalface_default.xml')
 
     if Face_Cascade.empty():
         print('Script Not Loaded !!')
@@ -30,9 +29,9 @@ def Emotions_Predict(Myimage):
             Detection_resize = cv2.resize(Detection, (32,32))
             Detection_resize = np.expand_dims(Detection_resize, axis=0)
 
-
-            My_Model = joblib.load('../ML/Model/Model.dump')
+            My_Model = joblib.load('ML/Model/Model.dump')
             Prediction = My_Model.predict(Detection_resize)
+            print(Prediction)
             Predict = list(Prediction[0])
             index_i = Predict.index(max(Predict))
             Label_Name = Class_Name[index_i]
@@ -44,7 +43,8 @@ def Emotions_Predict(Myimage):
         return face_image,Label_Name,Score
 
 if __name__ == '__main__':
-    Pred,_,_ = Emotions_Predict('../../images_Test/image copy 6.png')
+    Pred,_,_ = Emotions_Predict('../../images_Test/image copy 3.png')
     cv2.imshow('Pred',Pred)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+

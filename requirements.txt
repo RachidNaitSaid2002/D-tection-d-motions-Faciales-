@@ -9,3 +9,6 @@ sys
 dotenv
 sqlalchemy
 pydantic
+mtcnn
+pytest
+httpx

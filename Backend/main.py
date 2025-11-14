@@ -1,7 +1,7 @@
-from fastapi import FastAPI, File, UploadFile
-from DB.db import SessionLocal, Base, engine, get_db
-from models.Predictions import Predictions
-from schemas.prediction import PredictionCreate,PredictionResponse
+from fastapi import FastAPI, File, UploadFile, HTTPException
+from Backend.DB.database import Base, engine, SessionLocal
+from Backend.models.Predictions import Predictions
+from Backend.schemas.prediction import PredictionResponse
 import numpy as np
 import sys
 import os
@@ -23,15 +23,19 @@ def root():
 
 
 @app.post("/Prediction", response_model=PredictionResponse)
-def add_Prediction(file: UploadFile = File(...)):
+def  add_Prediction(file: UploadFile = File(...)):
 
     contents = file.file.read()
     nparr = np.frombuffer(contents, np.uint8)
     image_b = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    if image_b is None:
+        raise HTTPException(status_code=400, detail="Invalid image file.")
     cv2.imwrite('temp.jpg', image_b)
 
     result = Emotions_Predict('temp.jpg')
     face_image, Label_Name, Score = result
+
+    print(result)
 
     new_prediction = {
         "Prediction": Label_Name,
