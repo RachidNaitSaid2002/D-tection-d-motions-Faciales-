@@ -42,6 +42,7 @@ def Emotions_Predict(Myimage):
 
         return face_image,Label_Name,Score
 
+
 if __name__ == '__main__':
     Pred,_,_ = Emotions_Predict('../../images_Test/image copy 3.png')
     cv2.imshow('Pred',Pred)
