@@ -7,6 +7,5 @@ Backend/DB/__pycache__
 Backend/models/__pycache__
 Backend/schemas/__pycache__
 Data
-.pytest_cache
 __pycache__
 PredictiosResults
