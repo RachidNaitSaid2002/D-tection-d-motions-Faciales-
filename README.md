@@ -25,7 +25,7 @@ Ce projet est un système de **détection d'émotions faciales** (intitulé "D-t
 | `.env` | Variables d'environnement (non versionné) |
 | `PredictiosResults/` | Répertoire pour les images de prédictions traitées |
 | `images_Test/` | Images de test pour les prédictions |
-| `Data/` | Données d'entraînement et de test (train/test) (https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer/data) |
+| `Data/` | Données d'entraînement et de test (train/test) <a href='https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer/data'> Télecharger Data </a> |
 
 ### Composants Clés :
 - **Module d'Apprentissage Automatique (ML)** :
