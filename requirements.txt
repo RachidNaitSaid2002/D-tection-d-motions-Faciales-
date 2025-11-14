@@ -8,3 +8,4 @@ pydantic
 mtcnn
 pytest
 httpx
+fastapi
