@@ -10,3 +10,4 @@ mtcnn
 pytest
 httpx
 dotenv
+python-multipart
